@@ -2,6 +2,8 @@ import numpy as np
 import math as m
 import cv2
 
+## Generates real damage masks from the damaged input image.
+##Assuming damage is white, fetch all the pixels from range (0.85* max. intensity pixel - max. intenisty pixel).
 
 def generateMasks(image):
     img = cv2.imread(image, cv2.IMREAD_GRAYSCALE)
